@@ -1,0 +1,658 @@
+[
+  {
+    "veiculo_id": "12-AB-34",
+    "timestamp": "2026-10-09T17:30:00Z",
+    "gps": {
+      "latitude": 41.5503,
+      "longitude": -8.4201
+    },
+    "velocidade_kmh": 48.5,
+    "temperatura_carga_c": 6.2,
+    "nivel_combustivel_pct": 78.0
+  },
+  {
+    "veiculo_id": "45-CD-67",
+    "timestamp": "2026-10-09T17:30:05Z",
+    "gps": {
+      "latitude": 41.5333,
+      "longitude": -8.6167
+    },
+    "velocidade_kmh": 62.0,
+    "temperatura_carga_c": 7.9,
+    "nivel_combustivel_pct": 45.5
+  },
+  {
+    "veiculo_id": "89-EF-01",
+    "timestamp": "2026-10-09T17:30:10Z",
+    "gps": {
+      "latitude": 41.547,
+      "longitude": -8.415
+    },
+    "velocidade_kmh": 35.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 64.0
+  },
+  {
+    "veiculo_id": "23-GH-45",
+    "timestamp": "2026-10-09T17:30:15Z",
+    "gps": {
+      "latitude": 41.524,
+      "longitude": -8.391
+    },
+    "velocidade_kmh": 66.0,
+    "temperatura_carga_c": 7.6,
+    "nivel_combustivel_pct": 52.0
+  },
+  {
+    "veiculo_id": "34-IJ-56",
+    "timestamp": "2026-10-09T17:30:20Z",
+    "gps": {
+      "latitude": 41.561,
+      "longitude": -8.397
+    },
+    "velocidade_kmh": 28.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 71.0
+  },
+  {
+    "veiculo_id": "56-KL-78",
+    "timestamp": "2026-10-09T17:30:25Z",
+    "gps": {
+      "latitude": 41.5605,
+      "longitude": -8.3985
+    },
+    "velocidade_kmh": 24.0,
+    "temperatura_carga_c": 5.8,
+    "nivel_combustivel_pct": 58.0
+  },
+  {
+    "veiculo_id": "67-MN-90",
+    "timestamp": "2026-10-09T17:30:30Z",
+    "gps": {
+      "latitude": 41.4096,
+      "longitude": -8.5198
+    },
+    "velocidade_kmh": 68.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 39.0
+  },
+  {
+    "veiculo_id": "78-OP-12",
+    "timestamp": "2026-10-09T17:30:35Z",
+    "gps": {
+      "latitude": 41.5449,
+      "longitude": -8.429
+    },
+    "velocidade_kmh": 31.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 83.0
+  },
+  {
+    "veiculo_id": "90-QR-23",
+    "timestamp": "2026-10-09T17:30:40Z",
+    "gps": {
+      "latitude": 41.512,
+      "longitude": -8.47
+    },
+    "velocidade_kmh": 44.0,
+    "temperatura_carga_c": 5.2,
+    "nivel_combustivel_pct": 90.0
+  },
+  {
+    "veiculo_id": "11-ST-34",
+    "timestamp": "2026-10-09T17:30:45Z",
+    "gps": {
+      "latitude": 41.444,
+      "longitude": -8.296
+    },
+    "velocidade_kmh": 45.0,
+    "temperatura_carga_c": 6.9,
+    "nivel_combustivel_pct": 67.0
+  },
+  {
+    "veiculo_id": "22-UV-56",
+    "timestamp": "2026-10-09T17:30:50Z",
+    "gps": {
+      "latitude": 41.559,
+      "longitude": -8.57
+    },
+    "velocidade_kmh": 62.0,
+    "temperatura_carga_c": 7.0,
+    "nivel_combustivel_pct": 48.0
+  },
+  {
+    "veiculo_id": "78-QR-90",
+    "timestamp": "2026-10-09T17:30:55Z",
+    "gps": {
+      "latitude": 41.602,
+      "longitude": -8.59
+    },
+    "velocidade_kmh": 100.0,
+    "temperatura_carga_c": 7.2,
+    "nivel_combustivel_pct": 60.0
+  },
+  {
+    "veiculo_id": "55-AB-12",
+    "timestamp": "2026-10-09T17:31:00Z",
+    "gps": {
+      "latitude": 41.549,
+      "longitude": -8.424
+    },
+    "velocidade_kmh": 39.0,
+    "temperatura_carga_c": 7.0,
+    "nivel_combustivel_pct": 72.0
+  },
+  {
+    "veiculo_id": "77-EF-56",
+    "timestamp": "2026-10-09T17:31:05Z",
+    "gps": {
+      "latitude": 41.538,
+      "longitude": -8.615
+    },
+    "velocidade_kmh": 33.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 55.0
+  },
+  {
+    "veiculo_id": "12-AB-34",
+    "timestamp": "2026-10-09T17:31:00Z",
+    "gps": {
+      "latitude": 41.5507,
+      "longitude": -8.4198
+    },
+    "velocidade_kmh": 53.0,
+    "temperatura_carga_c": 8.9,
+    "nivel_combustivel_pct": 77.5
+  },
+  {
+    "veiculo_id": "45-CD-67",
+    "timestamp": "2026-10-09T17:31:05Z",
+    "gps": {
+      "latitude": 41.5337,
+      "longitude": -8.6164
+    },
+    "velocidade_kmh": 58.5,
+    "temperatura_carga_c": 9.1,
+    "nivel_combustivel_pct": 45.0
+  },
+  {
+    "veiculo_id": "89-EF-01",
+    "timestamp": "2026-10-09T17:31:10Z",
+    "gps": {
+      "latitude": 41.5474,
+      "longitude": -8.4147
+    },
+    "velocidade_kmh": 44.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 63.5
+  },
+  {
+    "veiculo_id": "23-GH-45",
+    "timestamp": "2026-10-09T17:31:15Z",
+    "gps": {
+      "latitude": 41.5244,
+      "longitude": -8.3907
+    },
+    "velocidade_kmh": 78.0,
+    "temperatura_carga_c": 8.6,
+    "nivel_combustivel_pct": 51.2
+  },
+  {
+    "veiculo_id": "34-IJ-56",
+    "timestamp": "2026-10-09T17:31:20Z",
+    "gps": {
+      "latitude": 41.5614,
+      "longitude": -8.3967
+    },
+    "velocidade_kmh": 34.5,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 70.4
+  },
+  {
+    "veiculo_id": "56-KL-78",
+    "timestamp": "2026-10-09T17:31:25Z",
+    "gps": {
+      "latitude": 41.5609,
+      "longitude": -8.3982
+    },
+    "velocidade_kmh": 33.0,
+    "temperatura_carga_c": 6.4,
+    "nivel_combustivel_pct": 57.6
+  },
+  {
+    "veiculo_id": "67-MN-90",
+    "timestamp": "2026-10-09T17:31:30Z",
+    "gps": {
+      "latitude": 41.41,
+      "longitude": -8.5195
+    },
+    "velocidade_kmh": 74.5,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 38.5
+  },
+  {
+    "veiculo_id": "78-OP-12",
+    "timestamp": "2026-10-09T17:31:35Z",
+    "gps": {
+      "latitude": 41.5453,
+      "longitude": -8.4287
+    },
+    "velocidade_kmh": 27.5,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 82.6
+  },
+  {
+    "veiculo_id": "90-QR-23",
+    "timestamp": "2026-10-09T17:31:40Z",
+    "gps": {
+      "latitude": 41.5124,
+      "longitude": -8.4697
+    },
+    "velocidade_kmh": 51.0,
+    "temperatura_carga_c": 6.0,
+    "nivel_combustivel_pct": 89.0
+  },
+  {
+    "veiculo_id": "11-ST-34",
+    "timestamp": "2026-10-09T17:31:45Z",
+    "gps": {
+      "latitude": 41.4444,
+      "longitude": -8.2957
+    },
+    "velocidade_kmh": 52.5,
+    "temperatura_carga_c": 8.2,
+    "nivel_combustivel_pct": 66.4
+  },
+  {
+    "veiculo_id": "22-UV-56",
+    "timestamp": "2026-10-09T17:31:50Z",
+    "gps": {
+      "latitude": 41.5594,
+      "longitude": -8.5697
+    },
+    "velocidade_kmh": 75.0,
+    "temperatura_carga_c": 7.6,
+    "nivel_combustivel_pct": 47.2
+  },
+  {
+    "veiculo_id": "78-QR-90",
+    "timestamp": "2026-10-09T17:31:55Z",
+    "gps": {
+      "latitude": 41.6024,
+      "longitude": -8.5897
+    },
+    "velocidade_kmh": 121.0,
+    "temperatura_carga_c": 7.9,
+    "nivel_combustivel_pct": 59.1
+  },
+  {
+    "veiculo_id": "55-AB-12",
+    "timestamp": "2026-10-09T17:32:00Z",
+    "gps": {
+      "latitude": 41.5494,
+      "longitude": -8.4237
+    },
+    "velocidade_kmh": 46.0,
+    "temperatura_carga_c": 7.3,
+    "nivel_combustivel_pct": 71.5
+  },
+  {
+    "veiculo_id": "77-EF-56",
+    "timestamp": "2026-10-09T17:32:05Z",
+    "gps": {
+      "latitude": 41.5384,
+      "longitude": -8.6147
+    },
+    "velocidade_kmh": 40.5,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 54.4
+  },
+  {
+    "veiculo_id": "12-AB-34",
+    "timestamp": "2026-10-09T17:32:00Z",
+    "gps": {
+      "latitude": 41.5511,
+      "longitude": -8.4195
+    },
+    "velocidade_kmh": 41.0,
+    "temperatura_carga_c": 7.1,
+    "nivel_combustivel_pct": 77.0
+  },
+  {
+    "veiculo_id": "45-CD-67",
+    "timestamp": "2026-10-09T17:32:05Z",
+    "gps": {
+      "latitude": 41.5341,
+      "longitude": -8.6161
+    },
+    "velocidade_kmh": 47.0,
+    "temperatura_carga_c": 7.4,
+    "nivel_combustivel_pct": 44.6
+  },
+  {
+    "veiculo_id": "89-EF-01",
+    "timestamp": "2026-10-09T17:32:10Z",
+    "gps": {
+      "latitude": 41.5478,
+      "longitude": -8.4144
+    },
+    "velocidade_kmh": 49.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 63.0
+  },
+  {
+    "veiculo_id": "23-GH-45",
+    "timestamp": "2026-10-09T17:32:15Z",
+    "gps": {
+      "latitude": 41.5248,
+      "longitude": -8.3904
+    },
+    "velocidade_kmh": 71.5,
+    "temperatura_carga_c": 7.9,
+    "nivel_combustivel_pct": 12.5
+  },
+  {
+    "veiculo_id": "34-IJ-56",
+    "timestamp": "2026-10-09T17:32:20Z",
+    "gps": {
+      "latitude": 41.5618,
+      "longitude": -8.3964
+    },
+    "velocidade_kmh": 22.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 70.0
+  },
+  {
+    "veiculo_id": "56-KL-78",
+    "timestamp": "2026-10-09T17:32:25Z",
+    "gps": {
+      "latitude": 41.5613,
+      "longitude": -8.3979
+    },
+    "velocidade_kmh": 29.5,
+    "temperatura_carga_c": 7.0,
+    "nivel_combustivel_pct": 57.0
+  },
+  {
+    "veiculo_id": "67-MN-90",
+    "timestamp": "2026-10-09T17:32:30Z",
+    "gps": {
+      "latitude": 41.4104,
+      "longitude": -8.5192
+    },
+    "velocidade_kmh": 69.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 38.0
+  },
+  {
+    "veiculo_id": "78-OP-12",
+    "timestamp": "2026-10-09T17:32:35Z",
+    "gps": {
+      "latitude": 41.5457,
+      "longitude": -8.4284
+    },
+    "velocidade_kmh": 25.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 82.0
+  },
+  {
+    "veiculo_id": "90-QR-23",
+    "timestamp": "2026-10-09T17:32:40Z",
+    "gps": {
+      "latitude": 41.5128,
+      "longitude": -8.4694
+    },
+    "velocidade_kmh": 47.5,
+    "temperatura_carga_c": 7.7,
+    "nivel_combustivel_pct": 88.1
+  },
+  {
+    "veiculo_id": "11-ST-34",
+    "timestamp": "2026-10-09T17:32:45Z",
+    "gps": {
+      "latitude": 41.4448,
+      "longitude": -8.2954
+    },
+    "velocidade_kmh": 47.0,
+    "temperatura_carga_c": 7.5,
+    "nivel_combustivel_pct": 66.0
+  },
+  {
+    "veiculo_id": "22-UV-56",
+    "timestamp": "2026-10-09T17:32:50Z",
+    "gps": {
+      "latitude": 41.5598,
+      "longitude": -8.5694
+    },
+    "velocidade_kmh": 68.0,
+    "temperatura_carga_c": 8.9,
+    "nivel_combustivel_pct": 46.5
+  },
+  {
+    "veiculo_id": "78-QR-90",
+    "timestamp": "2026-10-09T17:32:55Z",
+    "gps": {
+      "latitude": 41.6028,
+      "longitude": -8.5894
+    },
+    "velocidade_kmh": 98.0,
+    "temperatura_carga_c": 8.1,
+    "nivel_combustivel_pct": 58.0
+  },
+  {
+    "veiculo_id": "55-AB-12",
+    "timestamp": "2026-10-09T17:33:00Z",
+    "gps": {
+      "latitude": 41.5498,
+      "longitude": -8.4234
+    },
+    "velocidade_kmh": 51.5,
+    "temperatura_carga_c": 9.3,
+    "nivel_combustivel_pct": 71.0
+  },
+  {
+    "veiculo_id": "77-EF-56",
+    "timestamp": "2026-10-09T17:33:05Z",
+    "gps": {
+      "latitude": 41.5388,
+      "longitude": -8.6144
+    },
+    "velocidade_kmh": 44.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 54.0
+  },
+  {
+    "veiculo_id": "99-ZZ-99",
+    "timestamp": "2026-10-09T17:30:20Z",
+    "gps": {
+      "latitude": 41.45,
+      "longitude": -8.5
+    },
+    "velocidade_kmh": 55.0,
+    "temperatura_carga_c": 6.5,
+    "nivel_combustivel_pct": 80.0
+  },
+  {
+    "veiculo_id": "99-ZZ-99",
+    "timestamp": "2026-10-09T17:31:20Z",
+    "gps": {
+      "latitude": 41.4506,
+      "longitude": -8.5003
+    },
+    "velocidade_kmh": 60.0,
+    "temperatura_carga_c": 6.9,
+    "nivel_combustivel_pct": 79.5
+  },
+  {
+    "veiculo_id": "33-WX-78",
+    "timestamp": "2026-10-09T17:30:30Z",
+    "gps": {
+      "latitude": 41.53,
+      "longitude": -8.43
+    },
+    "velocidade_kmh": 40.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 61.0
+  },
+  {
+    "veiculo_id": "66-CD-34",
+    "timestamp": "2026-10-09T17:30:35Z",
+    "gps": {
+      "latitude": 41.52,
+      "longitude": -8.44
+    },
+    "velocidade_kmh": 36.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 66.0
+  },
+  {
+    "veiculo_id": "12-AB-34",
+    "timestamp": "2026-10-09T17:30:00Z",
+    "gps": {
+      "latitude": 41.5503,
+      "longitude": -8.4201
+    },
+    "velocidade_kmh": 48.5,
+    "temperatura_carga_c": 6.2,
+    "nivel_combustivel_pct": 78.0
+  },
+  {
+    "veiculo_id": " 56-kl-78 ",
+    "timestamp": "2026-10-09T17:36:40Z",
+    "gps": {
+      "latitude": 41.5611,
+      "longitude": -8.3981
+    },
+    "velocidade_kmh": 26.0,
+    "temperatura_carga_c": 6.1,
+    "nivel_combustivel_pct": 56.0
+  },
+  {
+    "veiculo_id": "67-MN-90",
+    "timestamp": "2026-10-09T17:36:50Z",
+    "gps": {
+      "latitude": 41.41,
+      "longitude": -8.52
+    },
+    "velocidade_kmh": -12.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 37.0
+  },
+  {
+    "veiculo_id": "89-EF-01",
+    "timestamp": "2026-10-09T17:37:00Z",
+    "gps": {
+      "latitude": 41.5471,
+      "longitude": -8.4151
+    },
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 62.0
+  },
+  {
+    "veiculo_id": "34-IJ-56",
+    "timestamp": "2026-10-09T17:37:10Z",
+    "gps": {
+      "latitude": 41.5612,
+      "longitude": -8.3972
+    },
+    "velocidade_kmh": 30.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": 140.0
+  },
+  {
+    "veiculo_id": "78-OP-12",
+    "timestamp": "2026-10-09T17:37:20Z",
+    "gps": {
+      "latitude": 41.545,
+      "longitude": -8.4291
+    },
+    "velocidade_kmh": 29.0,
+    "temperatura_carga_c": null,
+    "nivel_combustivel_pct": -3.2
+  },
+  {
+    "veiculo_id": "AB-12-34",
+    "timestamp": "2026-10-09T17:37:30Z",
+    "gps": {
+      "latitude": 41.5,
+      "longitude": -8.4
+    },
+    "velocidade_kmh": 40.0,
+    "temperatura_carga_c": 6.0,
+    "nivel_combustivel_pct": 50.0
+  },
+  {
+    "veiculo_id": "90-QR-23",
+    "timestamp": "2026-13-40T99:00:00Z",
+    "gps": {
+      "latitude": 41.5121,
+      "longitude": -8.4701
+    },
+    "velocidade_kmh": 90.0,
+    "temperatura_carga_c": 6.0,
+    "nivel_combustivel_pct": 87.0
+  },
+  {
+    "veiculo_id": "11-ST-34",
+    "timestamp": "09/10/2026 17:45",
+    "gps": {
+      "latitude": 41.4441,
+      "longitude": -8.2961
+    },
+    "velocidade_kmh": 44.0,
+    "temperatura_carga_c": 7.0,
+    "nivel_combustivel_pct": 65.0
+  },
+  {
+    "veiculo_id": "22-UV-56",
+    "timestamp": "2026-10-09T17:37:50Z",
+    "gps": null,
+    "velocidade_kmh": 80.0,
+    "temperatura_carga_c": 7.0,
+    "nivel_combustivel_pct": 45.0
+  },
+  {
+    "veiculo_id": "55-AB-12",
+    "timestamp": "2026-10-09T17:38:00Z",
+    "gps": {
+      "latitude": 123.4,
+      "longitude": -8.4241
+    },
+    "velocidade_kmh": 40.0,
+    "temperatura_carga_c": 7.0,
+    "nivel_combustivel_pct": 70.0
+  },
+  {
+    "veiculo_id": null,
+    "timestamp": "2026-10-09T17:38:10Z",
+    "gps": {
+      "latitude": 41.5,
+      "longitude": -8.4
+    },
+    "velocidade_kmh": 40.0,
+    "temperatura_carga_c": 6.0,
+    "nivel_combustivel_pct": 50.0
+  },
+  {
+    "veiculo_id": "23-GH-45",
+    "timestamp": "2026-10-09T17:38:20Z",
+    "gps": {
+      "latitude": 41.5241,
+      "longitude": -8.3911
+    },
+    "velocidade_kmh": 300.0,
+    "temperatura_carga_c": 7.0,
+    "nivel_combustivel_pct": 50.0
+  },
+  {
+    "veiculo_id": "77-EF-56",
+    "timestamp": "2026-10-09T17:38:30Z",
+    "gps": {
+      "latitude": 41.5381,
+      "longitude": -8.6151
+    },
+    "velocidade_kmh": 41.0,
+    "temperatura_carga_c": 999.0,
+    "nivel_combustivel_pct": 53.0
+  }
+]

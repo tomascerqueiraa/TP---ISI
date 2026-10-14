@@ -1,0 +1,36 @@
+# config_zonas.yaml  -  Regras operacionais por zona de distribuição
+# Smart Delivery Analytics (ISI 2026/27)
+versao: 2
+empresa: "Smart Delivery Analytics"
+atualizado_em: "2026-10-13"
+
+# Limites por zona (usados em T4 para calcular excesso_velocidade e alerta_temperatura)
+zonas:
+  - zona: "Centro Urbano"
+    limite_velocidade_kmh: 50
+    temperatura_max_carga_c: 8.5
+    alertas_ativos: true
+  - zona: "Zona Industrial"
+    limite_velocidade_kmh: 70
+    temperatura_max_carga_c: 8.0
+    alertas_ativos: true
+  - zona: "Autoestrada"
+    limite_velocidade_kmh: 120
+    temperatura_max_carga_c: 7.5
+    alertas_ativos: true
+  - zona: "Zona Escolar"
+    limite_velocidade_kmh: 30
+    temperatura_max_carga_c: 8.5
+    alertas_ativos: true
+
+# Zona por defeito quando o veículo não tem encomenda associada
+mapeamento_categoria_zona:
+  - categoria: "Ligeiro"
+    zona_padrao: "Centro Urbano"
+  - categoria: "Pesado"
+    zona_padrao: "Zona Industrial"
+
+# Destino das notificações (usado no Job)
+notificacoes:
+  email_destino: "gestor.frota@exemplo.pt"
+  assunto_alerta: "[Smart Delivery] Alertas de frota"

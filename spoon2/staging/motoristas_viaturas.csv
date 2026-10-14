@@ -1,0 +1,16 @@
+id_motorista,nome,carta_conducao,matricula,categoria,marca,modelo,tipo_carga
+1,João Silva,P-9876543,12-AB-34,Ligeiro,Renault,Kangoo Express,Refrigerada
+2,Maria Santos,P-1234567,45-CD-67,Pesado,Mercedes-Benz,Atego,Refrigerada
+3,Carlos Ferreira,P-7654321,89-EF-01,Ligeiro,Citroën,Berlingo Van,Seca
+4,Ana Conceição,P-2345678,23-GH-45,Pesado,Iveco,Eurocargo,Refrigerada
+5,Sérgio Araújo,P-3456789,34-IJ-56,Ligeiro,Peugeot,Partner,Seca
+6,Inês Gonçalves,P-4567890,56-KL-78,Ligeiro,Ford,Transit Connect,Refrigerada
+7,Rui Magalhães,P-5678901,67-MN-90,Pesado,Volvo,FL,Seca
+8,Beatriz Fonseca,P-6789012,78-OP-12,Ligeiro,Fiat,Doblò Cargo,Seca
+9,Paulo   Mendes,P-8901234,90-QR-23,Ligeiro,Opel,Vivaro-e,Refrigerada
+10,Ana   Rita   Costa,P-0123456,11-ST-34,Ligeiro,Nissan,NV200,Seca
+11,Tiago Lopes,P9876543,22-UV-56,Pesado,MAN,TGL,Refrigerada
+12,Helena Cruz,p-123,33-WX-78,Ligeiro,Renault,Master,Seca
+14,Sofia Pinto,P-2233445,55-AB-12,Ligeiro,Citroën,Jumpy,Refrigerada
+16,Cláudia Nogueira,,66-CD-34,Ligeiro,Peugeot,Expert,Seca
+19,Vasco Ribeiro,P-5566778,77-EF-56,Ligeiro,Ford,Transit Custom,Seca

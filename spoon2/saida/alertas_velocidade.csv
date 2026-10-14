@@ -1,0 +1,19 @@
+veiculo_id,timestamp,velocidade_kmh,temperatura_carga_c,nivel_combustivel_pct,nome,categoria,tipo_carga
+11-ST-34,2026-10-09T17:31:45Z,52.5,8.2,66.4,Ana   Rita   Costa,Ligeiro,Seca
+12-AB-34,2026-10-09T17:31:00Z,53.0,8.9,77.5,João Silva,Ligeiro,Refrigerada
+22-UV-56,2026-10-09T17:30:50Z,62.0,7.0,48.0,Tiago Lopes,Pesado,Refrigerada
+22-UV-56,2026-10-09T17:31:50Z,75.0,7.6,47.2,Tiago Lopes,Pesado,Refrigerada
+22-UV-56,2026-10-09T17:32:50Z,68.0,8.9,46.5,Tiago Lopes,Pesado,Refrigerada
+22-UV-56,2026-10-09T17:37:50Z,80.0,7.0,45.0,Tiago Lopes,Pesado,Refrigerada
+23-GH-45,2026-10-09T17:30:15Z,66.0,7.6,52.0,Ana Conceição,Pesado,Refrigerada
+23-GH-45,2026-10-09T17:31:15Z,78.0,8.6,51.2,Ana Conceição,Pesado,Refrigerada
+23-GH-45,2026-10-09T17:32:15Z,71.5,7.9,12.5,Ana Conceição,Pesado,Refrigerada
+23-GH-45,2026-10-09T17:38:20Z,300.0,7.0,50.0,Ana Conceição,Pesado,Refrigerada
+45-CD-67,2026-10-09T17:30:05Z,62.0,7.9,45.5,Maria Santos,Pesado,Refrigerada
+45-CD-67,2026-10-09T17:31:05Z,58.5,9.1,45.0,Maria Santos,Pesado,Refrigerada
+55-AB-12,2026-10-09T17:33:00Z,51.5,9.3,71.0,Sofia Pinto,Ligeiro,Refrigerada
+67-MN-90,2026-10-09T17:30:30Z,68.0,,39.0,Rui Magalhães,Pesado,Seca
+67-MN-90,2026-10-09T17:31:30Z,74.5,,38.5,Rui Magalhães,Pesado,Seca
+67-MN-90,2026-10-09T17:32:30Z,69.0,,38.0,Rui Magalhães,Pesado,Seca
+90-QR-23,2026-10-09T17:31:40Z,51.0,6.0,89.0,Paulo   Mendes,Ligeiro,Refrigerada
+90-QR-23,2026-13-40T99:00:00Z,90.0,6.0,87.0,Paulo   Mendes,Ligeiro,Refrigerada

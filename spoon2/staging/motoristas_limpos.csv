@@ -1,0 +1,16 @@
+id_motorista,nome,carta_conducao,matricula,categoria
+1,João Silva,P-9876543,12-AB-34,Ligeiro
+2,Maria Santos,P-1234567,45-CD-67,Pesado
+3,Carlos Ferreira,P-7654321,89-EF-01,Ligeiro
+4,Ana Conceição,P-2345678,23-GH-45,Pesado
+5,Sérgio Araújo,P-3456789,34-IJ-56,Ligeiro
+6,Inês Gonçalves,P-4567890,56-KL-78,Ligeiro
+7,Rui Magalhães,P-5678901,67-MN-90,Pesado
+8,Beatriz Fonseca,P-6789012,78-OP-12,Ligeiro
+9,Paulo   Mendes,P-8901234,90-QR-23,Ligeiro
+10,Ana   Rita   Costa,P-0123456,11-ST-34,Ligeiro
+11,Tiago Lopes,P9876543,22-UV-56,Pesado
+12,Helena Cruz,p-123,33-WX-78,Ligeiro
+14,Sofia Pinto,P-2233445,55-AB-12,Ligeiro
+16,Cláudia Nogueira,,66-CD-34,Ligeiro
+19,Vasco Ribeiro,P-5566778,77-EF-56,Ligeiro
