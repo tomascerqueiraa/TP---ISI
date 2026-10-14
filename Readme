@@ -1,0 +1,95 @@
+# 🚚 Smart Delivery Analytics — Sistema ETL de Gestão de Frotas
+
+Processo ETL (Extract, Transformation, Load) desenvolvido no âmbito da unidade curricular de **Integração de Sistemas de Informação (ISI)** da **Licenciatura em Engenharia de Sistemas Informáticos** da **Escola Superior de Tecnologia do IPCA** (2026/27).
+
+---
+
+## 📌 Enquadramento e Problema
+
+O projeto simula a integração e análise de dados operacionais de uma empresa fictícia de distribuição na região de Braga (*Smart Delivery Analytics*). A informação encontrava-se dispersa por múltiplas fontes heterogéneas e apresentava falhas de qualidade (duplicações, valores nulos, erros de formatação em matrículas e leituras de sensores inválidas). 
+
+O objetivo principal foi desenhar um pipeline ETL automatizado utilizando o **Pentaho Data Integration (PDI / Kettle)** para recolher, limpar, validar, cruzar e persistir os dados numa base de dados relacional **PostgreSQL**, gerando também ficheiros de exportação e relatórios analíticos.
+
+---
+
+## 🏗️ Arquitetura e Estrutura do Projeto
+
+O repositório está organizado da seguinte forma:
+
+```text
+├── database/                   # Scripts SQL (Criação de esquemas, dados de teste e consultas)
+│   ├── schema.sql              # Estrutura das tabelas no PostgreSQL
+│   ├── db_logistica_backup.sql # Backup completo da base de dados
+│   └── consultas.sql           # Queries de verificação e auditoria
+│
+├── integracao_frotas/          # Ficheiros de dados de origem (Fontes)
+│   ├── motoristas_frota.csv    # Dados brutos dos motoristas (CSV)
+│   ├── viaturas.xml            # Dados das viaturas (XML)
+│   ├── telemetria_sensores.json# Leituras de telemetria IoT (JSON)
+│   └── config_zonas.yaml       # Configuração de zonas e limites
+│
+├── spoon2/                     # Pasta de trabalho principal do Pentaho / Staging / Saída
+│   ├── staging/                # Ficheiros intermédios limpos (CSV)
+│   ├── saida/                  # Ficheiros finais exportados, alertas e rejeitados (CSV/JSON)
+│   ├── job_frotas_simples.kjb  # Job principal de orquestração
+│   ├── T1_motoristas.ktr       # Transformação 1: Limpeza de Motoristas
+│   ├── T2_viaturas.ktr         # Transformação 2: Junção com Viaturas (XML)
+│   ├── T3_telemetria.ktr       # Transformação 3: Validação IoT, Alertas e Agregações
+│   ├── T4_meteo.ktr            # Transformação 4: Consumo da API Open-Meteo
+│   └── T5_carregar_bd.ktr      # Transformação 5: Carga para o PostgreSQL
+│
+├── ESI-ISI 2026-27 - TP1 - enunciado.pdf  # Enunciado oficial do trabalho prático
+└── Relatorio_TP1_Smart_Delivery_Analytics.docx # Relatório técnico detalhado
+
+## 🔄 Fluxo do Processo ETL
+
+O pipeline executa-se de forma sequencial através de um **Job** de orquestração no Pentaho:
+
+* **Extração (E):**
+  * Leitura do ficheiro **CSV** de motoristas.
+  * Leitura da estrutura **XML** de viaturas.
+  * Consumo do fluxo **JSON** de telemetria dos sensores dos veículos.
+  * Requisição HTTP **GET** a uma API REST externa (**Open-Meteo**) para recolha de dados meteorológicos em tempo real para a região de Braga.
+
+* **Transformação (T):**
+  * **Limpeza e Normalização:** Remoção de duplicados, correção de maiúsculas/minúsculas e eliminação de espaços indesejados (`String Operations`).
+  * **Validação por Regex:** Validação rigorosa do formato de matrículas portuguesas (`^[0-9]{2}-[A-Z]{2}-[0-9]{2}$`).
+  * **Filtros de Qualidade:** Rejeição de valores nulos, velocidades negativas ou níveis de combustível superiores a 100% (os registos inválidos são exportados para pastas de auditoria `rejeitados_*`).
+  * **Cruzamentos (Lookups) e Agregações:** Associação entre motoristas e viaturas por matrícula (`Stream Lookup`) e cálculo de métricas agregadas por veículo (velocidade média, máxima e mínimo de combustível via `Group By`).
+
+* **Carga (L):**
+  * Persistência dos dados limpos, dos alertas de excesso de velocidade e dos resumos operacionais em tabelas relacionais no **PostgreSQL** (`db_logistica`).
+  * Exportação dos resultados finais consolidados em formatos abertos (`CSV` e `JSON`).
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **Ferramenta ETL:** Pentaho Data Integration (Spoon / Kettle)
+* **Base de Dados:** PostgreSQL
+* **Linguagens / Formatos:** SQL, CSV, XML, JSON, YAML
+* **APIs Externas:** Open-Meteo Weather API
+* **Controlo de Versões:** Git & GitHub
+
+---
+
+## 🚀 Como Executar o Projeto
+
+* **Pré-requisitos:**
+  * Ter o **Pentaho Data Integration (Kettle)** instalado[cite: 6].
+  * Ter o **PostgreSQL** a correr localmente com uma base de dados criada com o nome `db_logistica`.
+
+* **Configuração da Base de Dados:**
+  * Executar o script `database/schema.sql` (ou repor o backup `database/db_logistica_backup.sql`) na vossa instância PostgreSQL para criar as tabelas necessárias.
+
+* **Execução do Pipeline:**
+  * Abrir o Pentaho Spoon[cite: 6].
+  * Carregar o job principal localizado em `spoon2/job_frotas_simples.kjb`.
+  * Ajustar as credenciais da ligação à base de dados (`postgresSQL`), caso necessário.
+  * Clicar no botão **Run** para executar todo o fluxo de ponta a ponta[cite: 6].
+
+---
+
+## 👨‍💻 Autor
+
+Trabalho realizado de forma individual por **Tomás Afonso Cerqueira Gomes** (º 31501) no âmbito da Licenciatura em Engenharia de Sistemas Informáticos (LESI).
