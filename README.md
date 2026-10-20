@@ -2,7 +2,7 @@
 
 Trabalho Prático I · Integração de Sistemas de Informação · 2026/27  
 Licenciatura em Engenharia de Sistemas Informáticos · Escola Superior de Tecnologia – IPCA  
-Autor: **[Nome e número de aluno]**
+Autor: **Tomás Afonso Cerqueira Gomes nº31501**
 
 ## 1. Descrição
 
