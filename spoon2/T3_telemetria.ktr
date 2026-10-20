@@ -473,11 +473,31 @@
     </hop>
     <hop>
       <from>Combustivel &lt;= 100?</from>
-      <to>Ordenar leituras</to>
+      <to>Velocidade &lt;= 200?</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Combustivel &lt;= 100?</from>
+      <to>Rejeitados telemetria</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Velocidade &lt;= 200?</from>
+      <to>Instante valido? (regex)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Velocidade &lt;= 200?</from>
+      <to>Rejeitados telemetria</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Instante valido? (regex)</from>
+      <to>Ordenar leituras</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Instante valido? (regex)</from>
       <to>Rejeitados telemetria</to>
       <enabled>Y</enabled>
     </hop>
@@ -700,8 +720,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2240</xloc>
-      <yloc>40</yloc>
+      <xloc>1250</xloc>
+      <yloc>170</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -778,8 +798,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2240</xloc>
-      <yloc>140</yloc>
+      <xloc>1250</xloc>
+      <yloc>260</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -832,8 +852,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1340</xloc>
-      <yloc>200</yloc>
+      <xloc>400</xloc>
+      <yloc>280</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -848,7 +868,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>Ordenar leituras</send_true_to>
+    <send_true_to>Velocidade &lt;= 200?</send_true_to>
     <send_false_to>Rejeitados telemetria</send_false_to>
     <compare>
       <condition>
@@ -876,8 +896,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>200</yloc>
+      <xloc>740</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -901,8 +921,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2060</xloc>
-      <yloc>100</yloc>
+      <xloc>1080</xloc>
+      <yloc>230</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -926,8 +946,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2240</xloc>
-      <yloc>230</yloc>
+      <xloc>1250</xloc>
+      <yloc>340</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -951,8 +971,52 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1700</xloc>
-      <yloc>200</yloc>
+      <xloc>740</xloc>
+      <yloc>280</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Instante valido? (regex)</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Ordenar leituras</send_true_to>
+    <send_false_to>Rejeitados telemetria</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>timestamp</leftvalue>
+        <function>REGEXP</function>
+        <rightvalue/>
+        <value>
+          <name>constant</name>
+          <type>String</type>
+          <text>^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]Z$</text>
+          <length>-1</length>
+          <precision>-1</precision>
+          <isnull>N</isnull>
+          <mask/>
+        </value>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1080</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -986,8 +1050,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1520</xloc>
-      <yloc>200</yloc>
+      <xloc>570</xloc>
+      <yloc>280</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1036,8 +1100,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>980</xloc>
-      <yloc>200</yloc>
+      <xloc>60</xloc>
+      <yloc>280</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1078,8 +1142,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1880</xloc>
-      <yloc>320</yloc>
+      <xloc>910</xloc>
+      <yloc>430</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1231,8 +1295,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1520</xloc>
-      <yloc>360</yloc>
+      <xloc>570</xloc>
+      <yloc>420</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1348,8 +1412,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>400</yloc>
+      <xloc>570</xloc>
+      <yloc>180</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1387,8 +1451,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1160</xloc>
-      <yloc>200</yloc>
+      <xloc>230</xloc>
+      <yloc>280</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1451,8 +1515,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2060</xloc>
-      <yloc>320</yloc>
+      <xloc>1080</xloc>
+      <yloc>430</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1568,8 +1632,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2240</xloc>
-      <yloc>320</yloc>
+      <xloc>1250</xloc>
+      <yloc>430</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1603,8 +1667,52 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>260</xloc>
-      <yloc>200</yloc>
+      <xloc>230</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Velocidade &lt;= 200?</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Instante valido? (regex)</send_true_to>
+    <send_false_to>Rejeitados telemetria</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>velocidade_kmh</leftvalue>
+        <function>&lt;=</function>
+        <rightvalue/>
+        <value>
+          <name>constant</name>
+          <type>Number</type>
+          <text>200.0</text>
+          <length>-1</length>
+          <precision>-1</precision>
+          <isnull>N</isnull>
+          <mask>####0.0#########;-####0.0#########</mask>
+        </value>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>910</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1647,8 +1755,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1880</xloc>
-      <yloc>100</yloc>
+      <xloc>910</xloc>
+      <yloc>230</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1691,8 +1799,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>620</xloc>
-      <yloc>200</yloc>
+      <xloc>570</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1726,8 +1834,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>440</xloc>
-      <yloc>200</yloc>
+      <xloc>400</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1855,8 +1963,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1340</xloc>
-      <yloc>360</yloc>
+      <xloc>400</xloc>
+      <yloc>420</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1884,7 +1992,7 @@
     <includeNulls>N</includeNulls>
     <rownum_field/>
     <file>
-      <name>C:\Users\Acer\Desktop\1Semestre\ISI\Trabalho Pratico\integracao_frotas\telemetria_sensores.json</name>
+      <name>C:\Users\Acer\Desktop\1Semestre\ISI\Trabalho_Pratico\integracao_frotas\telemetria_sensores.json</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -1978,8 +2086,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>60</xloc>
-      <yloc>200</yloc>
+      <xloc>96</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

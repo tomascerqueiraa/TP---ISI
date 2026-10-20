@@ -8,7 +8,6 @@ veiculo_id,timestamp,velocidade_kmh,temperatura_carga_c,nivel_combustivel_pct,no
 23-GH-45,2026-10-09T17:30:15Z,66.0,7.6,52.0,Ana Conceição,Pesado,Refrigerada
 23-GH-45,2026-10-09T17:31:15Z,78.0,8.6,51.2,Ana Conceição,Pesado,Refrigerada
 23-GH-45,2026-10-09T17:32:15Z,71.5,7.9,12.5,Ana Conceição,Pesado,Refrigerada
-23-GH-45,2026-10-09T17:38:20Z,300.0,7.0,50.0,Ana Conceição,Pesado,Refrigerada
 45-CD-67,2026-10-09T17:30:05Z,62.0,7.9,45.5,Maria Santos,Pesado,Refrigerada
 45-CD-67,2026-10-09T17:31:05Z,58.5,9.1,45.0,Maria Santos,Pesado,Refrigerada
 55-AB-12,2026-10-09T17:33:00Z,51.5,9.3,71.0,Sofia Pinto,Ligeiro,Refrigerada
@@ -16,4 +15,3 @@ veiculo_id,timestamp,velocidade_kmh,temperatura_carga_c,nivel_combustivel_pct,no
 67-MN-90,2026-10-09T17:31:30Z,74.5,,38.5,Rui Magalhães,Pesado,Seca
 67-MN-90,2026-10-09T17:32:30Z,69.0,,38.0,Rui Magalhães,Pesado,Seca
 90-QR-23,2026-10-09T17:31:40Z,51.0,6.0,89.0,Paulo   Mendes,Ligeiro,Refrigerada
-90-QR-23,2026-13-40T99:00:00Z,90.0,6.0,87.0,Paulo   Mendes,Ligeiro,Refrigerada

@@ -750,8 +750,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>60</xloc>
-      <yloc>180</yloc>
+      <xloc>80</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -780,7 +780,7 @@
     <rownum_field/>
     <encoding>UTF-8</encoding>
     <file>
-      <name>C:\Users\Acer\Desktop\1Semestre\ISI\Trabalho Pratico\integracao_frotas\viaturas.xml</name>
+      <name>C:\Users\Acer\Desktop\1Semestre\ISI\Trabalho_Pratico\integracao_frotas\viaturas.xml</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>

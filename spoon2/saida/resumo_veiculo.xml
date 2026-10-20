@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Rows>
+<Row><veiculo_id>11-ST-34</veiculo_id> <n_leituras>3</n_leituras> <velocidade_media>48.20</velocidade_media> <velocidade_max>52.50</velocidade_max> <combustivel_min>66.00</combustivel_min></Row>
+<Row><veiculo_id>12-AB-34</veiculo_id> <n_leituras>3</n_leituras> <velocidade_media>47.50</velocidade_media> <velocidade_max>53.00</velocidade_max> <combustivel_min>77.00</combustivel_min></Row>
+<Row><veiculo_id>22-UV-56</veiculo_id> <n_leituras>4</n_leituras> <velocidade_media>71.20</velocidade_media> <velocidade_max>80.00</velocidade_max> <combustivel_min>45.00</combustivel_min></Row>
+<Row><veiculo_id>23-GH-45</veiculo_id> <n_leituras>3</n_leituras> <velocidade_media>71.80</velocidade_media> <velocidade_max>78.00</velocidade_max> <combustivel_min>12.50</combustivel_min></Row>
+<Row><veiculo_id>33-WX-78</veiculo_id> <n_leituras>1</n_leituras> <velocidade_media>40.00</velocidade_media> <velocidade_max>40.00</velocidade_max> <combustivel_min>61.00</combustivel_min></Row>
+<Row><veiculo_id>34-IJ-56</veiculo_id> <n_leituras>3</n_leituras> <velocidade_media>28.20</velocidade_media> <velocidade_max>34.50</velocidade_max> <combustivel_min>70.00</combustivel_min></Row>
+<Row><veiculo_id>45-CD-67</veiculo_id> <n_leituras>3</n_leituras> <velocidade_media>55.80</velocidade_media> <velocidade_max>62.00</velocidade_max> <combustivel_min>44.60</combustivel_min></Row>
+<Row><veiculo_id>55-AB-12</veiculo_id> <n_leituras>4</n_leituras> <velocidade_media>44.10</velocidade_media> <velocidade_max>51.50</velocidade_max> <combustivel_min>70.00</combustivel_min></Row>
+<Row><veiculo_id>56-KL-78</veiculo_id> <n_leituras>3</n_leituras> <velocidade_media>28.80</velocidade_media> <velocidade_max>33.00</velocidade_max> <combustivel_min>57.00</combustivel_min></Row>
+<Row><veiculo_id>66-CD-34</veiculo_id> <n_leituras>1</n_leituras> <velocidade_media>36.00</velocidade_media> <velocidade_max>36.00</velocidade_max> <combustivel_min>66.00</combustivel_min></Row>
+<Row><veiculo_id>67-MN-90</veiculo_id> <n_leituras>3</n_leituras> <velocidade_media>70.50</velocidade_media> <velocidade_max>74.50</velocidade_max> <combustivel_min>38.00</combustivel_min></Row>
+<Row><veiculo_id>77-EF-56</veiculo_id> <n_leituras>4</n_leituras> <velocidade_media>39.60</velocidade_media> <velocidade_max>44.00</velocidade_max> <combustivel_min>53.00</combustivel_min></Row>
+<Row><veiculo_id>78-OP-12</veiculo_id> <n_leituras>4</n_leituras> <velocidade_media>28.10</velocidade_media> <velocidade_max>31.00</velocidade_max> <combustivel_min>-3.20</combustivel_min></Row>
+<Row><veiculo_id>89-EF-01</veiculo_id> <n_leituras>3</n_leituras> <velocidade_media>42.70</velocidade_media> <velocidade_max>49.00</velocidade_max> <combustivel_min>63.00</combustivel_min></Row>
+<Row><veiculo_id>90-QR-23</veiculo_id> <n_leituras>3</n_leituras> <velocidade_media>47.50</velocidade_media> <velocidade_max>51.00</velocidade_max> <combustivel_min>88.10</combustivel_min></Row>
+</Rows>

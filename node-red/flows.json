@@ -1,0 +1,438 @@
+[
+ {
+  "id": "flow1",
+  "type": "tab",
+  "label": "Smart Delivery - Dashboard",
+  "disabled": false,
+  "info": ""
+ },
+ {
+  "id": "pgcfg",
+  "type": "postgreSQLConfig",
+  "name": "db_logistica",
+  "host": "127.0.0.1",
+  "hostFieldType": "str",
+  "port": 5432,
+  "portFieldType": "num",
+  "database": "db_logistica",
+  "databaseFieldType": "str",
+  "ssl": "false",
+  "sslFieldType": "bool",
+  "applicationName": "",
+  "applicationNameFieldType": "str",
+  "max": 10,
+  "maxFieldType": "num",
+  "idle": 1000,
+  "idleFieldType": "num",
+  "connectionTimeout": 10000,
+  "connectionTimeoutFieldType": "num",
+  "user": "postgres",
+  "userFieldType": "str",
+  "password": "",
+  "passwordFieldType": "str"
+ },
+ {
+  "id": "tab1",
+  "type": "ui_tab",
+  "name": "Smart Delivery",
+  "icon": "dashboard",
+  "disabled": false,
+  "hidden": false
+ },
+ {
+  "id": "g_res",
+  "type": "ui_group",
+  "name": "Resumo da frota",
+  "tab": "tab1",
+  "order": 1,
+  "disp": true,
+  "width": "6",
+  "collapse": false,
+  "className": ""
+ },
+ {
+  "id": "g_met",
+  "type": "ui_group",
+  "name": "Meteorologia (API Open-Meteo)",
+  "tab": "tab1",
+  "order": 2,
+  "disp": true,
+  "width": "6",
+  "collapse": false,
+  "className": ""
+ },
+ {
+  "id": "g_vel",
+  "type": "ui_group",
+  "name": "Velocidade máxima por veículo",
+  "tab": "tab1",
+  "order": 3,
+  "disp": true,
+  "width": "12",
+  "collapse": false,
+  "className": ""
+ },
+ {
+  "id": "g_al",
+  "type": "ui_group",
+  "name": "Alertas de velocidade",
+  "tab": "tab1",
+  "order": 4,
+  "disp": true,
+  "width": "12",
+  "collapse": false,
+  "className": ""
+ },
+ {
+  "id": "inj",
+  "type": "inject",
+  "z": "flow1",
+  "name": "A cada 10 s",
+  "props": [
+   {
+    "p": "payload"
+   }
+  ],
+  "repeat": "10",
+  "crontab": "",
+  "once": true,
+  "onceDelay": "1",
+  "topic": "",
+  "payload": "",
+  "payloadType": "date",
+  "x": 130,
+  "y": 220,
+  "wires": [
+   [
+    "q1",
+    "q2",
+    "q3",
+    "q4"
+   ]
+  ]
+ },
+ {
+  "id": "q1",
+  "type": "postgresql",
+  "z": "flow1",
+  "name": "Resumo por veículo",
+  "query": "SELECT veiculo_id, velocidade_max FROM resumo_veiculo ORDER BY velocidade_max DESC",
+  "postgreSQLConfig": "pgcfg",
+  "split": false,
+  "rowsPerMsg": 1,
+  "outputs": 1,
+  "x": 360,
+  "y": 100,
+  "wires": [
+   [
+    "f1"
+   ]
+  ]
+ },
+ {
+  "id": "q2",
+  "type": "postgresql",
+  "z": "flow1",
+  "name": "Alertas de velocidade",
+  "query": "SELECT veiculo_id AS veiculo, nome AS motorista, velocidade_kmh AS velocidade, ts AS instante FROM alerta_velocidade ORDER BY velocidade_kmh DESC LIMIT 20",
+  "postgreSQLConfig": "pgcfg",
+  "split": false,
+  "rowsPerMsg": 1,
+  "outputs": 1,
+  "x": 360,
+  "y": 180,
+  "wires": [
+   [
+    "f2"
+   ]
+  ]
+ },
+ {
+  "id": "q3",
+  "type": "postgresql",
+  "z": "flow1",
+  "name": "Última meteorologia",
+  "query": "SELECT temperatura_c, vento_kmh, humidade_pct, hora FROM meteo ORDER BY id_meteo DESC LIMIT 1",
+  "postgreSQLConfig": "pgcfg",
+  "split": false,
+  "rowsPerMsg": 1,
+  "outputs": 1,
+  "x": 360,
+  "y": 260,
+  "wires": [
+   [
+    "f3"
+   ]
+  ]
+ },
+ {
+  "id": "q4",
+  "type": "postgresql",
+  "z": "flow1",
+  "name": "Contagens",
+  "query": "SELECT (SELECT COUNT(*) FROM alerta_velocidade) AS alertas, (SELECT COUNT(*) FROM resumo_veiculo) AS veiculos, (SELECT COUNT(*) FROM motorista_viatura) AS motoristas",
+  "postgreSQLConfig": "pgcfg",
+  "split": false,
+  "rowsPerMsg": 1,
+  "outputs": 1,
+  "x": 360,
+  "y": 340,
+  "wires": [
+   [
+    "f4"
+   ]
+  ]
+ },
+ {
+  "id": "f1",
+  "type": "function",
+  "z": "flow1",
+  "name": "Formatar gráfico",
+  "func": "const r = msg.payload || [];\nmsg.payload = [{\n  series: ['Velocidade máx (km/h)'],\n  data: [ r.map(x => Number(x.velocidade_max)) ],\n  labels: r.map(x => x.veiculo_id)\n}];\nreturn msg;",
+  "outputs": 1,
+  "timeout": 0,
+  "noerr": 0,
+  "initialize": "",
+  "finalize": "",
+  "libs": [],
+  "x": 600,
+  "y": 100,
+  "wires": [
+   [
+    "chart"
+   ]
+  ]
+ },
+ {
+  "id": "f2",
+  "type": "function",
+  "z": "flow1",
+  "name": "Formatar tabela",
+  "func": "msg.payload = (msg.payload || []).map(x => ({\n  veiculo: x.veiculo,\n  motorista: x.motorista,\n  velocidade: Number(x.velocidade),\n  instante: x.instante\n}));\nreturn msg;",
+  "outputs": 1,
+  "timeout": 0,
+  "noerr": 0,
+  "initialize": "",
+  "finalize": "",
+  "libs": [],
+  "x": 600,
+  "y": 180,
+  "wires": [
+   [
+    "tabela"
+   ]
+  ]
+ },
+ {
+  "id": "f3",
+  "type": "function",
+  "z": "flow1",
+  "name": "Separar meteo",
+  "func": "const r = (msg.payload || [])[0];\nif (!r) return [null, null, null];\nreturn [\n  { payload: Number(r.temperatura_c) },\n  { payload: Number(r.vento_kmh) },\n  { payload: 'Leitura: ' + r.hora + ' · Humidade: ' + r.humidade_pct + '%' }\n];",
+  "outputs": 3,
+  "timeout": 0,
+  "noerr": 0,
+  "initialize": "",
+  "finalize": "",
+  "libs": [],
+  "x": 600,
+  "y": 260,
+  "wires": [
+   [
+    "g_temp"
+   ],
+   [
+    "g_vento"
+   ],
+   [
+    "txt_meteo"
+   ]
+  ]
+ },
+ {
+  "id": "f4",
+  "type": "function",
+  "z": "flow1",
+  "name": "Formatar contagens",
+  "func": "const r = (msg.payload || [])[0];\nif (!r) return null;\nmsg.payload = '<b>' + r.veiculos + '</b> veículos · <b>' + r.motoristas + '</b> motoristas · <b>' + r.alertas + '</b> alertas de velocidade';\nreturn msg;",
+  "outputs": 1,
+  "timeout": 0,
+  "noerr": 0,
+  "initialize": "",
+  "finalize": "",
+  "libs": [],
+  "x": 600,
+  "y": 340,
+  "wires": [
+   [
+    "txt_res",
+    "dbg"
+   ]
+  ]
+ },
+ {
+  "id": "chart",
+  "type": "ui_chart",
+  "z": "flow1",
+  "name": "Velocidade máxima",
+  "group": "g_vel",
+  "order": 1,
+  "width": 12,
+  "height": 6,
+  "label": "",
+  "chartType": "bar",
+  "legend": "false",
+  "xformat": "HH:mm:ss",
+  "interpolate": "linear",
+  "nodata": "Sem dados",
+  "dot": false,
+  "ymin": "0",
+  "ymax": "",
+  "removeOlder": 1,
+  "removeOlderPoints": "",
+  "removeOlderUnit": "3600",
+  "cutout": 0,
+  "useOneColor": false,
+  "useUTC": false,
+  "colors": [
+   "#1f77b4",
+   "#aec7e8",
+   "#ff7f0e",
+   "#2ca02c",
+   "#98df8a",
+   "#d62728",
+   "#ff9896",
+   "#9467bd",
+   "#c5b0d5"
+  ],
+  "outputs": 1,
+  "useDifferentColor": false,
+  "className": "",
+  "x": 850,
+  "y": 100,
+  "wires": [
+   []
+  ]
+ },
+ {
+  "id": "tabela",
+  "type": "ui_table",
+  "z": "flow1",
+  "group": "g_al",
+  "name": "Tabela de alertas",
+  "order": 1,
+  "width": 12,
+  "height": 8,
+  "columns": [],
+  "outputs": 0,
+  "cts": false,
+  "x": 850,
+  "y": 180,
+  "wires": []
+ },
+ {
+  "id": "g_temp",
+  "type": "ui_gauge",
+  "z": "flow1",
+  "name": "Temperatura",
+  "group": "g_met",
+  "order": 1,
+  "width": 3,
+  "height": 4,
+  "gtype": "gage",
+  "title": "Temperatura",
+  "label": "°C",
+  "format": "{{value}}",
+  "min": 0,
+  "max": 40,
+  "colors": [
+   "#00b500",
+   "#e6e600",
+   "#ca3838"
+  ],
+  "seg1": "20",
+  "seg2": "30",
+  "diff": false,
+  "className": "",
+  "x": 850,
+  "y": 240,
+  "wires": []
+ },
+ {
+  "id": "g_vento",
+  "type": "ui_gauge",
+  "z": "flow1",
+  "name": "Vento",
+  "group": "g_met",
+  "order": 2,
+  "width": 3,
+  "height": 4,
+  "gtype": "gage",
+  "title": "Vento",
+  "label": "km/h",
+  "format": "{{value}}",
+  "min": 0,
+  "max": 80,
+  "colors": [
+   "#00b500",
+   "#e6e600",
+   "#ca3838"
+  ],
+  "seg1": "30",
+  "seg2": "50",
+  "diff": false,
+  "className": "",
+  "x": 850,
+  "y": 280,
+  "wires": []
+ },
+ {
+  "id": "txt_meteo",
+  "type": "ui_text",
+  "z": "flow1",
+  "group": "g_met",
+  "order": 3,
+  "width": 6,
+  "height": 1,
+  "name": "Detalhe meteo",
+  "label": "",
+  "format": "{{msg.payload}}",
+  "layout": "row-left",
+  "className": "",
+  "x": 860,
+  "y": 320,
+  "wires": []
+ },
+ {
+  "id": "txt_res",
+  "type": "ui_text",
+  "z": "flow1",
+  "group": "g_res",
+  "order": 1,
+  "width": 6,
+  "height": 2,
+  "name": "Resumo",
+  "label": "",
+  "format": "{{msg.payload}}",
+  "layout": "row-left",
+  "className": "",
+  "x": 850,
+  "y": 370,
+  "wires": []
+ },
+ {
+  "id": "dbg",
+  "type": "debug",
+  "z": "flow1",
+  "name": "debug contagens",
+  "active": true,
+  "tosidebar": true,
+  "console": false,
+  "tostatus": false,
+  "complete": "payload",
+  "targetType": "msg",
+  "x": 860,
+  "y": 410,
+  "wires": []
+ }
+]
