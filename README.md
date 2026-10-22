@@ -2,7 +2,9 @@
 
 Trabalho Prático I · Integração de Sistemas de Informação · 2026/27  
 Licenciatura em Engenharia de Sistemas Informáticos · Escola Superior de Tecnologia – IPCA  
-Autor: **Tomás Afonso Cerqueira Gomes nº31501**
+Autor: **Tomás Afonso Cerqueira Gomes nº31501 & Guilherme Costa Araujo nº30146**
+Videos: Tomás Cerqueira Gomes (Kettle- Pentaho): https://alunosipca-my.sharepoint.com/personal/a31501_alunos_ipca_pt/_layouts/15/stream.aspx?id=%2Fpersonal%2Fa31501%5Falunos%5Fipca%5Fpt%2FDocuments%2Fvideo%5Ftp%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Eac5c5e8a%2D1c68%2D4086%2Dae9b%2D39f542ca7607
+        Guilherme Araujo (Knime): https://alunosipca-my.sharepoint.com/personal/a30146_alunos_ipca_pt/_layouts/15/stream.aspx?id=%2Fpersonal%2Fa30146%5Falunos%5Fipca%5Fpt%2FDocuments%2FVideoISITP%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E23672833%2D8df7%2D4dcc%2Db636%2Dba4485ec1e51
 
 ## 1. Descrição
 
